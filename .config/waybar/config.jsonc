@@ -17,6 +17,7 @@
   ],
 
   "modules-right": [
+    "custom/launcher",
     "pulseaudio",
     "network",
     "cpu",
@@ -91,5 +92,13 @@
     "return-type": "json",
     "interval": 2,
     "tooltip": true
+  }
+
+  ,
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "tooltip": false
   }
 }
