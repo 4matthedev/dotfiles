@@ -87,3 +87,16 @@ tooltip {
   color: #ffffff;
   font-size: 13px;
 }
+
+
+#custom-media {
+  padding: 0 8px;
+  font-size: 16px;
+  color: #d8dee9;
+}
+
+#custom-network {
+  padding: 0 7px;
+  color: #a3be8c;
+  font-size: 14px;
+}

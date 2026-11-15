@@ -19,7 +19,7 @@
 
   "modules-right": [
     "pulseaudio",
-    "network",
+    "custom/network",
     "cpu",
     "memory",
     "custom/media",
@@ -59,7 +59,9 @@
     "format-wifi": "\uf1eb",
     "format-ethernet": "\uf0ac",
     "format-disconnected": "\uf00d",
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "IP: {ipaddr}\nDown: {bandwidthDownBits} bps\nUp: {bandwidthUpBits} bps",
+    "interval": 2
   },
 
   "cpu": {
@@ -100,5 +102,14 @@
     "format": "",
     "on-click": "wofi --show drun",
     "tooltip": false
+  }
+
+  ,
+
+  "custom/network": {
+    "exec": "/home/turker/.local/bin/network-waybar.py",
+    "return-type": "json",
+    "interval": 2,
+    "tooltip": true
   }
 }
