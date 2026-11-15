@@ -6,7 +6,7 @@
 local mainMod = "SUPER"
 
 -- Set to false if you ever want a completely static desktop.
-local animationsEnabled = true
+local animationsEnabled = false
 
 -- Programs
 local terminal    = "kitty"
@@ -93,7 +93,7 @@ hl.config({
     },
 
     animations = {
-        enabled = true,
+        enabled = false,
     },
 })
 
@@ -111,7 +111,7 @@ hl.curve("smooth", {
 
 hl.animation({
   leaf = "windows",
-  enabled = true,
+  enabled = false,
   speed = 8,
   bezier = "smooth",
   style = "popin",
@@ -119,7 +119,7 @@ hl.animation({
 
 hl.animation({
   leaf = "workspaces",
-  enabled = true,
+  enabled = false,
   speed = 8,
   bezier = "smooth",
   style = "slidefade",
@@ -127,14 +127,14 @@ hl.animation({
 
 hl.animation({
   leaf = "fade",
-  enabled = true,
+  enabled = false,
   speed = 6,
   bezier = "smooth",
 })
 
 hl.animation({
   leaf = "layers",
-  enabled = true,
+  enabled = false,
   speed = 7,
   bezier = "smooth",
   style = "fade",
