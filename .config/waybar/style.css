@@ -81,3 +81,9 @@ tooltip {
 #custom-ai.active { color: #a6e3a1; }
 #custom-ai.idle { color: #f9e2af; }
 #custom-ai.inactive { color: #f38ba8; }
+
+#custom-launcher {
+  padding: 0 8px;
+  color: #88c0d0;
+  font-size: 16px;
+}
