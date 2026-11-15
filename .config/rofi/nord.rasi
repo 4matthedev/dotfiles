@@ -1,0 +1,156 @@
+
+/* ==========================================
+   MODERN NORD - ROFI THEME
+   Arch Linux / bspwm
+   ========================================== */
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "Apps";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+/* NORD COLORS */
+
+* {
+    nord-bg: #2E3440;
+    nord-bg-alt: #3B4252;
+    nord-panel: #434C5E;
+    nord-border: #4C566A;
+
+    nord-fg: #ECEFF4;
+    nord-muted: #D8DEE9;
+    nord-blue: #81A1C1;
+    nord-cyan: #88C0D0;
+
+    nord-green: #A3BE8C;
+    nord-red: #BF616A;
+
+    background-color: transparent;
+    text-color: @nord-fg;
+}
+
+/* WINDOW */
+
+window {
+    width: 650px;
+    border: 2px;
+    border-radius: 0;
+    border-color: @nord-border;
+
+    background-color: @nord-bg;
+
+    padding: 24px;
+}
+
+/* MAIN CONTAINER */
+
+mainbox {
+    background-color: transparent;
+    children: [
+        inputbar,
+        listview
+    ];
+
+    spacing: 20px;
+}
+
+/* SEARCH BAR */
+
+inputbar {
+    background-color: @nord-bg-alt;
+
+    border: 1px;
+    border-color: @nord-panel;
+    border-radius: 0;
+
+    padding: 16px;
+
+    children: [
+        prompt,
+        entry
+    ];
+
+    spacing: 12px;
+}
+
+prompt {
+    text-color: @nord-cyan;
+    font: "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    text-color: @nord-fg;
+    placeholder: "Search applications...";
+    placeholder-color: #81A1C1;
+
+    background-color: transparent;
+}
+
+/* APPLICATION LIST */
+
+listview {
+    columns: 1;
+    lines: 7;
+
+    fixed-height: true;
+    fixed-columns: true;
+
+    spacing: 6px;
+    scrollbar: false;
+
+    background-color: transparent;
+}
+
+/* APPLICATION ITEM */
+
+element {
+    background-color: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 0;
+
+    padding: 10px;
+    spacing: 12px;
+}
+
+/* SELECTED ITEM */
+
+element selected {
+    background-color: @nord-panel;
+
+    border: 1px;
+    border-color: @nord-cyan;
+
+    text-color: @nord-cyan;
+}
+
+/* ICONS */
+
+element-icon {
+    size: 32px;
+    background-color: transparent;
+}
+
+/* TEXT */
+
+element-text {
+    background-color: transparent;
+    text-color: @nord-fg;
+
+    vertical-align: 0.5;
+}
+
+element selected element-text {
+    text-color: @nord-cyan;
+}
+
+/* SCROLLBAR */
+
+scrollbar {
+    width: 4px;
+    handle-color: @nord-cyan;
+    background-color: @nord-bg-alt;
+}
