@@ -188,6 +188,18 @@ else:
         lines.append(f"      GPU offload: {'yes' if st=='loaded' else 'n/a (not loaded)'}")
         lines.append("")
 
+# set text/class based on loaded models
+loaded_ids = [m.get("id") for m in models if m.get("status", {}).get("value") == "loaded"]
+if loaded_ids:
+    out["text"] = "󰧑 " + loaded_ids[0]
+    out["class"] = "active"
+elif models:
+    out["text"] = "󰧑 " + str(len(models))
+    out["class"] = "idle"
+else:
+    out["text"] = "󰧑 0"
+    out["class"] = "idle"
+
 import html as _html
 out["tooltip"] = _html.escape("\n".join(lines))
 print(json.dumps(out))
