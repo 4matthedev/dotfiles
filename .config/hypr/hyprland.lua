@@ -108,37 +108,8 @@ hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}   
 hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
 hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
 
--- hl.animation({
-  leaf = "windowsIn",
-  enabled = true,
-  speed = 3.28,
-  bezier = "easeOutQuint",
-  style = "popin 87%"
-})
 
--- hl.animation({
-  leaf = "windowsOut",
-  enabled = true,
-  speed = 1.19,
-  bezier = "linear",
-  style = "popin 87%"
-})
 
--- hl.animation({ leaf = "windows",     enabled = false })
--- hl.animation({ leaf = "workspaces", enabled = false })
--- hl.animation({ leaf = "fade",       enabled = false })
--- hl.animation({ leaf = "layers",     enabled = false })
-
--- ==========================================
--- LAYOUT
--- ==========================================
-
-hl.config({
-    dwindle = {
-        preserve_split = true,
-        smart_resizing = true,
-    },
-})
 
 -- ==========================================
 -- INPUT
