@@ -114,7 +114,7 @@ hl.animation({ leaf = "windowsIn",  enabled = true, speed = 5, bezier = "linear"
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "linear" })
 hl.animation({ leaf = "fade",       enabled = true, speed = 5, bezier = "linear" })
 hl.animation({ leaf = "layers",     enabled = true, speed = 5, bezier = "linear", style = "fade" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "linear", style = "fade" })
+hl.animation({ leaf = "workspaces", enabled = false })
 
 -- ==========================================
 -- LAYOUT
