@@ -3,7 +3,7 @@ import json, os, time, subprocess
 
 IFACE = "enp3s0"
 CACHE = os.path.expanduser("~/.cache/network-waybar.json")
-ICON = "\uf0200"
+ICON = "\U000f0200"
 
 def read_bytes():
     with open("/proc/net/dev") as f:
@@ -47,4 +47,4 @@ with open(CACHE, "w") as f:
     json.dump({"t": now, "rx": rx, "tx": tx}, f)
 
 tooltip = f"Interface: {IFACE}\nIP: {ip}\nDown: {down_mbps:.2f} Mbps\nUp: {up_mbps:.2f} Mbps"
-print(json.dumps({"text": ICON, "tooltip": tooltip}))
+print(json.dumps({"text": ICON, "tooltip": tooltip}, ensure_ascii=False))
