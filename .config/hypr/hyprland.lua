@@ -6,7 +6,7 @@
 local mainMod = "SUPER"
 
 -- Set to false if you ever want a completely static desktop.
-local animationsEnabled = false
+local animationsEnabled = true
 
 -- Programs
 local terminal    = "kitty"
