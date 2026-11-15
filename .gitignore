@@ -1,0 +1,11 @@
+# secrets
+.config/gh/
+.ssh/
+.gnupg/
+*.key
+*.pem
+# large
+models/
+*.gguf
+# cache
+.cache/

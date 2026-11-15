@@ -1,0 +1,12 @@
+[Unit]
+Description=Prism ML llama.cpp server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/turker/.local/share/prism-llama/llama-prism-b12128-d7b2896/llama-server --host 127.0.0.1 --port 8080 --models-preset /home/turker/models/models.ini --models-max 4
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

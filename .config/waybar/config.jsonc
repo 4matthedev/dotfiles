@@ -1,0 +1,95 @@
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 7,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "custom/media",
+    "custom/ai",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name} {windows}",
+    "on-click": "activate",
+    "sort-by-number": true,
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "workspace-taskbar": {
+      "enable": true,
+      "icon-size": 10,
+      "max-icons": 1,
+      "icon-theme": ["Papirus-Dark", "Adwaita"],
+      "update-active-window": true
+    }
+  },
+
+  "clock": {
+    "format": "{:%a %d %b  %H:%M}",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "\uf028  {volume}%",
+    "format-muted": "\uf026",
+    "on-click": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": "\uf1eb",
+    "format-ethernet": "\uf0ac",
+    "format-disconnected": "\uf00d",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": "\uf2db  {usage}%",
+    "interval": 3
+  },
+
+  "memory": {
+    "format": "\uefc5  {}%",
+    "interval": 5
+  },
+
+  "tray": {
+    "spacing": 8
+  }
+  ,
+
+  "custom/ai": {
+    "exec": "/home/turker/.local/bin/llama-waybar.py",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "/home/turker/.local/bin/llama-menu.sh"
+  }
+
+  ,
+
+  "custom/media": {
+    "exec": "/home/turker/.local/bin/media-waybar.py",
+    "return-type": "json",
+    "interval": 2,
+    "tooltip": true
+  }
+}

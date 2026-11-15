@@ -1,0 +1,83 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* One flat, full-width bar instead of floating islands. */
+window#waybar {
+    background: #2e3440;
+    border-bottom: 1px solid #3b4252;
+    color: #d8dee9;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+    padding: 0 10px;
+}
+
+/* Workspaces: no pills, just a flat accent underline. */
+#workspaces button {
+    color: #4c566a;
+    background: transparent;
+    padding: 0 6px;
+    margin: 0;
+    border-radius: 0;
+}
+
+#workspaces button:not(.empty) {
+    color: #d8dee9;
+}
+
+#workspaces button.active {
+    color: #88c0d0;
+    background: transparent;
+    box-shadow: inset 0 -2px #88c0d0;
+}
+
+#workspaces button:hover {
+    background: #3b4252;
+    color: #eceff4;
+}
+
+#clock {
+    color: #d8dee9;
+    padding: 0 10px;
+}
+
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#tray {
+    color: #d8dee9;
+    padding: 0 7px;
+}
+
+/* Tiny Nord accents so the icons stay readable without labels. */
+#pulseaudio {
+    color: #88c0d0;
+}
+
+#network {
+    color: #a3be8c;
+}
+
+tooltip {
+    background: #2e3440;
+    border: 1px solid #4c566a;
+    border-radius: 4px;
+    color: #eceff4;
+}
+
+#custom-ai {
+  padding: 0 8px;
+  color: #a6e3a1;
+}
+#custom-ai.active { color: #a6e3a1; }
+#custom-ai.idle { color: #f9e2af; }
+#custom-ai.inactive { color: #f38ba8; }

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "localai/Qwen3.8-27B",
+  "providers": {
+    "localai": {
+      "name": "llama.cpp",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8080/v1",
+        "apiKey": "local"
+      },
+      "models": {
+        "Gemma-4-26B": {
+          "modelID": "Gemma-4-26B",
+          "name": "Gemma 4 26B A4B ",
+          "limit": {
+            "context": 262144,
+            "output": 8192
+          }
+        },
+        "Qwen3.8-27B": {
+          "modelID": "Qwen3.8-27B",
+          "name": "Qwen 3.8 27B (PTQ1_0, q4_0 KV)",
+          "limit": {
+            "context": 163840,
+            "output": 8192
+          }
+        }
+      }
+    }
+  }
+}
