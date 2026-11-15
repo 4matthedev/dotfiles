@@ -109,9 +109,9 @@ hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1} 
 hl.curve("easy",           { type = "spring", mass = 1, stiffness = 238.1191, damping = 24.21279333 })
 
 hl.animation({ leaf = "global",     enabled = true, speed = 5, bezier = "linear" })
-hl.animation({ leaf = "windows",    enabled = true, speed = 5, bezier = "linear", style = "fade" })
-hl.animation({ leaf = "windowsIn",  enabled = true, speed = 5, bezier = "linear", style = "fade" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "linear", style = "fade" })
+hl.animation({ leaf = "windows",    enabled = true, speed = 5, bezier = "linear" })
+hl.animation({ leaf = "windowsIn",  enabled = true, speed = 5, bezier = "linear" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "linear" })
 hl.animation({ leaf = "fade",       enabled = true, speed = 5, bezier = "linear" })
 hl.animation({ leaf = "layers",     enabled = true, speed = 5, bezier = "linear", style = "fade" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "linear", style = "fade" })
