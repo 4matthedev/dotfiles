@@ -1,0 +1,15 @@
+# wofi — Nord launcher settings
+# Theme lives in style.css
+
+width=620
+location=center
+show=drun
+prompt=Search applications...
+filter_rate=0
+allow_images=true
+image_size=32
+hide_scroll=true
+matching=fuzzy
+term=kitty
+gtk_dark=true
+lines=8
