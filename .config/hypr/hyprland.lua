@@ -11,7 +11,7 @@ local animationsEnabled = false
 -- Programs
 local terminal    = "kitty"
 local fileManager = "thunar"
-local menu        = "wofi --show drun"
+local menu        = "rofi -show drun"
 local browser     = "flatpak run app.zen_browser.zen"
 
 -- ==========================================
