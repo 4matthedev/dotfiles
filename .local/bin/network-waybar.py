@@ -3,7 +3,7 @@ import json, os, time, subprocess
 
 IFACE = "enp3s0"
 CACHE = os.path.expanduser("~/.cache/network-waybar.json")
-ICON = "\uf1e6"
+ICON = "\uf0e8"
 
 def read_bytes():
     with open("/proc/net/dev") as f:
