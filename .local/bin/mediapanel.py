@@ -375,7 +375,7 @@ class MediaPanel(Gtk.Window):
         .panel {{
             background-color: #2e3440;
             border: 1px solid #4c566a;
-            border-radius: 12px;
+            border-radius: 0;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
             padding: 4px;
         }}
