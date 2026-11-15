@@ -1,0 +1,86 @@
+/* ==========================================
+   WOFI — NORD THEME
+   - window stays transparent so the rounded #outer-box
+     is not clipped by black corners
+   - rows use explicit colors: a transparent background
+     makes GTK fall back to the light theme's fill
+   ========================================== */
+
+window {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    background-image: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11pt;
+}
+
+/* The Nord panel */
+#outer-box {
+    margin: 0px;
+    padding: 6px;
+    border: 2px solid #4C566A;
+    border-radius: 0;
+    background-color: #2E3440;
+    background-image: none;
+}
+
+/* Search bar */
+#input {
+    margin: 8px 8px 8px 8px;
+    padding: 9px 14px;
+    border: 1px solid #434C5E;
+    border-radius: 0;
+    background-color: #3B4252;
+    background-image: none;
+    color: #ECEFF4;
+    caret-color: #88C0D0;
+}
+
+#input:focus {
+    border-color: #88C0D0;
+}
+
+/* List */
+#inner-box {
+    margin: 0px 4px;
+    background-color: #2E3440;
+    background-image: none;
+}
+
+#scroll {
+    margin: 0px 4px 4px 4px;
+    background-color: transparent;
+    background-image: none;
+}
+
+/* Rows (flowbox children) */
+#entry {
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    background-color: #2E3440;
+    background-image: none;
+    box-shadow: none;
+}
+
+#entry:selected {
+    background-color: #434C5E;
+    border-color: #88C0D0;
+}
+
+#text {
+    background-color: transparent;
+    background-image: none;
+    color: #D8DEE9;
+    margin: 0px 8px;
+}
+
+#text:selected {
+    color: #88C0D0;
+}
+
+#img {
+    margin-right: 8px;
+}
