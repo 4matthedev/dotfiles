@@ -35,7 +35,7 @@
       "*": 5
     },
     "workspace-taskbar": {
-      "enable": true,
+      "enable": false,
       "icon-size": 10,
       "max-icons": 1,
       "icon-theme": ["Papirus-Dark", "Adwaita"],
