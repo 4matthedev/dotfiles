@@ -6,7 +6,7 @@
 local mainMod = "SUPER"
 
 -- Set to false if you ever want a completely static desktop.
-local animationsEnabled = false
+local animationsEnabled = true
 
 -- Programs
 local terminal    = "kitty"
@@ -93,7 +93,7 @@ hl.config({
     },
 
     animations = {
-        enabled = false,
+        enabled = true,
     },
 })
 
@@ -101,44 +101,28 @@ hl.config({
 -- ANIMATIONS
 -- ==========================================
 
-hl.curve("smooth", {
-  type = "bezier",
-  points = {
-    { 0.25, 0.1 },
-    { 0.25, 1.0 },
-  },
+hl.curve("easeOutQuint", { type = "bezier", points = { {0.23, 1}, {0.32, 1} } })
+
+hl.animation({
+  leaf = "windowsIn",
+  enabled = true,
+  speed = 3.28,
+  bezier = "easeOutQuint",
+  style = "popin 87%"
 })
 
 hl.animation({
-  leaf = "windows",
-  enabled = false,
-  speed = 8,
-  bezier = "smooth",
-  style = "popin",
+  leaf = "windowsOut",
+  enabled = true,
+  speed = 1.19,
+  bezier = "linear",
+  style = "popin 87%"
 })
 
-hl.animation({
-  leaf = "workspaces",
-  enabled = false,
-  speed = 8,
-  bezier = "smooth",
-  style = "slidefade",
-})
-
-hl.animation({
-  leaf = "fade",
-  enabled = false,
-  speed = 6,
-  bezier = "smooth",
-})
-
-hl.animation({
-  leaf = "layers",
-  enabled = false,
-  speed = 7,
-  bezier = "smooth",
-  style = "fade",
-})
+hl.animation({ leaf = "windows",     enabled = false })
+hl.animation({ leaf = "workspaces", enabled = false })
+hl.animation({ leaf = "fade",       enabled = false })
+hl.animation({ leaf = "layers",     enabled = false })
 
 -- ==========================================
 -- LAYOUT
